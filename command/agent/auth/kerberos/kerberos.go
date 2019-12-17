@@ -65,9 +65,10 @@ func (k *kerberosMethod) Authenticate(context.Context, *api.Client) (string, htt
 	if err != nil {
 		return "", nil, nil, err
 	}
-	header := new(http.Header)
+	var header http.Header
+	header = make(map[string][]string)
 	header.Set(spnego.HTTPHeaderAuthRequest, authHeaderVal)
-	return k.mountPath, *header, make(map[string]interface{}), nil
+	return k.mountPath + "/login", header, make(map[string]interface{}), nil
 }
 
 // These functions are implemented to meet the AuthHandler interface,
