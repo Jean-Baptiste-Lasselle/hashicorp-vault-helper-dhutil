@@ -38,7 +38,7 @@
     "@segment/in-eu": "^0.2.1",
     "@segment/top-domain": "^3.0.0",
     "color-contrast": "^0.0.1",
-    "highlight.js": "^9.15.10",
+    "highlight.js": "^10.1.2",
     "js-cookie": "^2.2.0",
     "marked": "^0.5.1",
     "normalize.css": "^8.0.0",
